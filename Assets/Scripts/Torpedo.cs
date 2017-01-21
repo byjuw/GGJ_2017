@@ -21,7 +21,7 @@ public class Torpedo : MonoBehaviour {
             rdr.GetComponent<SpriteRenderer>().color = tmp;
         }
         int fact = this.GetComponent<Rigidbody2D>().velocity.x > 0 ? 1 : -1;
-        if ( ( this.transform.position.x > 15 || this.transform.position.x < -15 )  && fact * this.transform.position.x > 0 ) {
+        if ( ( this.transform.position.x > 45 || this.transform.position.x < -45 )  && fact * this.transform.position.x > 0 ) {
             Destroy(this.gameObject);
         }
 	}
