@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject Score;
     public float acceleration_x = 10f;
     public float acceleration_y = 8f;
     public float drag_x = 1.5f;
@@ -35,5 +36,6 @@ public class PlayerMovement : MonoBehaviour
     {
         Debug.Log("Boom!!!");
         Application.LoadLevel("gameOver");
+        Score.GetComponent<Score>().setCounting(false);
     }
 }
