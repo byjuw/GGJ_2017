@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // velocity += acceleration - drag
         Rigidbody2D rb = this.GetComponent<Rigidbody2D>();
         rb.velocity = new Vector2(rb.velocity.x + (Input.GetAxis("Horizontal") * acceleration_x - drag_x * rb.velocity.x) * Time.deltaTime, rb.velocity.y + (Input.GetAxis("Vertical") * acceleration_y - drag_y * rb.velocity.y) * Time.deltaTime);
         angular_speed += Time.deltaTime * (Input.GetAxis("Vertical") * angular_acceleration - angular_speed * angular_drag);
