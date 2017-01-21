@@ -20,7 +20,7 @@ public class Score : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (_counting == true)
-            _count += 10 * Time.deltaTime;
+            _count += 5 * Time.deltaTime;
         if (countValueText)
             setCountValueText();
         else
