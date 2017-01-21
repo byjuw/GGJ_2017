@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public GameObject Score;
+    // public AudioClip[] soundfx;
     public float acceleration_x = 10f;
     public float acceleration_y = 8f;
     public float drag_x = 1.5f;
@@ -34,6 +35,7 @@ public class PlayerMovement : MonoBehaviour
     void OnTriggerEnter2D(Collider2D coll)
     {
         Debug.Log("Boom!!!");
+// AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
         Application.LoadLevel("gameOver");
         Score.GetComponent<Score>().setCounting(false);
     }

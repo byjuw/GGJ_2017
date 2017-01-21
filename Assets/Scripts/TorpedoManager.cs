@@ -6,6 +6,7 @@ public class TorpedoManager : MonoBehaviour
 {
 
     public GameObject Torpedo;
+    public float entry_x = 15f;
     public float b_inf_y = 0f;
     public float b_sup_y = 1f;
     public double freq = .005f;
@@ -29,7 +30,7 @@ public class TorpedoManager : MonoBehaviour
     {
         if (cooldown_actual <= 0 && Random.value < freq)
         {
-            float rand_x = Random.value > .5 ? 75 : -75;
+            float rand_x = Random.value > .5 ? entry_x : -entry_x;
             int fact = rand_x > 0 ? 1 : -1;
             int fact2 = rand_x > 0 ? 0 : 1;
             GameObject torpedo_instance = Instantiate(Torpedo, new Vector3(rand_x, random_borne_y(), 0), Quaternion.Euler(0, fact2 * 180, 0));
