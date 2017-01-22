@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Animals : MonoBehaviour {
-	private float _speed;
+	public float speed = 1f;
 
 	// Use this for initialization
 	void Start () {
@@ -16,10 +16,6 @@ public class Animals : MonoBehaviour {
 		if (this.transform.position.x < -15f)
 			Destroy(this.gameObject);
 		else
-			this.GetComponent<Rigidbody2D>().velocity = new Vector2(-_speed, 0f);
-	}
-
-	public void setSpeed(float speed) {
-		_speed = speed;
+			this.GetComponent<Rigidbody2D>().velocity = new Vector2(-speed, 0f);
 	}
 }

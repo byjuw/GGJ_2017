@@ -28,6 +28,7 @@ public class Torpedo : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D coll) {
-        Destroy(rdr.gameObject);
+        if (rdr && rdr.gameObject.transform.position == coll.gameObject.transform.position)
+            Destroy(rdr.gameObject);
     }
 }
