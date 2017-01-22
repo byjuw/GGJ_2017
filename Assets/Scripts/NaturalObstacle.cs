@@ -7,8 +7,8 @@ public class NaturalObstacle : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        Debug.Log("Natural Obstacle Started");
-        Debug.Log("Pos x: " + this.transform.position.x + " y: " + this.transform.position.y);
+        // Debug.Log("Natural Obstacle Started");
+        // Debug.Log("Pos x: " + this.transform.position.x + " y: " + this.transform.position.y);
 	}
 	
 	// Update is called once per frame
