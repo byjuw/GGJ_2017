@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class RetryButton : MonoBehaviour {
-
 	// Use this for initialization
 	void Start () {
 		
@@ -11,8 +10,8 @@ public class RetryButton : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
-	}
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Return)) Application.LoadLevel("main");
+    }
 
     public void onRetryClick() {
         Application.LoadLevel("main");
