@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: f883a58ba6d11fe46ba05eec09879aa3
+timeCreated: 1485008057
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Blue Ocean
+  fontNames:
+  - Blue Ocean
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

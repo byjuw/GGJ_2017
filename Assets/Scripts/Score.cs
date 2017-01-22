@@ -36,6 +36,11 @@ public class Score : MonoBehaviour {
         countValueText.text = ((int)_count).ToString();
     }
 
+    public void setCount(float count)
+    {
+        _count = count;
+    }
+
     public void setCounting(bool counting) {
         _counting = counting;
     }

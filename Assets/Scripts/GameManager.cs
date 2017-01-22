@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Score.GetComponent<Score>().setCount(0);
         Score.GetComponent<Score>().setCounting(true);
 	}
 	
