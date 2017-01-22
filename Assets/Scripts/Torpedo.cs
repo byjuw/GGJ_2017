@@ -12,6 +12,9 @@ public class Torpedo : MonoBehaviour {
     void Start () {
         rdr = Instantiate(RadarPoint, new Vector3(this.transform.position.x > 0 ? 8f : -8f, this.transform.position.y, 0), Quaternion.identity);
         startPos = this.transform.position;
+        Color tmp = rdr.GetComponent<SpriteRenderer>().color;
+        tmp.a = 0;
+        rdr.GetComponent<SpriteRenderer>().color = tmp;
     }
 
     // Update is called once per frame
