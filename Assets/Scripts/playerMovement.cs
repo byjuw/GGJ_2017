@@ -34,9 +34,10 @@ public class playerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("Boom!!!");
 // AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
-        Application.LoadLevel("gameOver");
-        Score.GetComponent<Score>().setCounting(false);
-    }
+		if (coll.tag != "RadarPoint") { 
+ 	   		Application.LoadLevel("gameOver");
+       		Score.GetComponent<Score>().setCounting(false);
+    	}
+	}
 }
