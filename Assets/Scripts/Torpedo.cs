@@ -11,6 +11,7 @@ public class Torpedo : MonoBehaviour {
     // Use this for initialization
     void Start () {
         rdr = Instantiate(RadarPoint, new Vector3(this.transform.position.x > 0 ? 7.5f : -7.5f, this.transform.position.y, 0), Quaternion.identity);
+        startPos = this.transform.position;
     }
 
     // Update is called once per frame
