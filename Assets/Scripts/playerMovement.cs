@@ -34,8 +34,7 @@ public class playerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("Boom!!!");
-// AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
+        // AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
         Application.LoadLevel("gameOver");
         Score.GetComponent<Score>().setCounting(false);
     }
