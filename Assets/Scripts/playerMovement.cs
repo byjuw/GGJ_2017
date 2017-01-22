@@ -15,6 +15,9 @@ public class playerMovement : MonoBehaviour
     public float steady = 2f;
     float angular_speed = 0f;
 
+    // tags that can destroy the sub
+    public string[] destroyers;
+
     // Use this for initialization
     void Start()
     {
@@ -34,8 +37,16 @@ public class playerMovement : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        // AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
-        Application.LoadLevel("gameOver");
-        Score.GetComponent<Score>().setCounting(false);
+        for (int i = 0; i < destroyers.Length; i++)
+        {
+            if (coll.tag == destroyers[i])
+            {
+                Debug.Log("Boom!!!");
+                // AudioSource.PlayClipAtPoint(soundfx[0], this.transform.position);
+                Application.LoadLevel("gameOver");
+                Score.GetComponent<Score>().setCounting(false);
+                break;
+            }
+        }
     }
 }

@@ -10,7 +10,7 @@ public class Torpedo : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
-        rdr = Instantiate(RadarPoint, new Vector3(this.transform.position.x > 0 ? 7.5f : -7.5f, this.transform.position.y, 0), Quaternion.identity);
+        rdr = Instantiate(RadarPoint, new Vector3(this.transform.position.x > 0 ? 8f : -8f, this.transform.position.y, 0), Quaternion.identity);
         startPos = this.transform.position;
     }
 
@@ -28,6 +28,7 @@ public class Torpedo : MonoBehaviour {
 	}
 
     void OnTriggerEnter2D(Collider2D coll) {
-        Destroy(rdr.gameObject);
+        if (rdr && rdr.gameObject.transform.position == coll.gameObject.transform.position)
+            Destroy(rdr.gameObject);
     }
 }
